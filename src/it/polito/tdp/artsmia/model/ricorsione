@@ -1,0 +1,24 @@
+OBIETTIVO: trovare un camino di LUN vertici, partendo dal vertice 'start'
+- cammino: vertici a due a due adiacenti
+- peso massimo
+- ogni vertice del cammino deve avere la stessa 'classification' di 'start'
+
+SOLUZIONE: Lista di ArtObject
+- primo elemento è 'start'
+- elementi successivi sono adiacenti
+- tutti elementi hanno la stessa classification
+- l'ordine degli elemti è rilevante
+
+SOLUZIONE TOTALE: soluzione di lunghezza LUN
+
+LIVELLO: lunghezza della sequenza
+
+PASSO DELLA RICORSIONE: aggiugnere un nuovo vertice in cosa alla sequenza 
+- adiacente all'ultimo vertice della sequenza parziale
+- purchè abbia la giusta 'classification'
+- purchè non faccia ancora parte della soluzione parziale
+
+CASO TERMINALE: soluzione ha lunghezza LUN
+- calcolare peso
+- se max, memorizzare soluzione
+- continuo a cercare, ma non proseguo in profondità (return)
